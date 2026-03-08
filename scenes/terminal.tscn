@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://clnxp3lhnsm1a"]
+
+[ext_resource type="Script" uid="uid://dkfgmi8xhc4ue" path="res://scripts/terminal.gd" id="1_m430i"]
+
+[node name="Terminal" type="Control" unique_id=42919814]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_m430i")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1366904190]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer" unique_id=179195432]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="OutputLabel" type="RichTextLabel" parent="VBoxContainer/ScrollContainer" unique_id=2080954816]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/normal_font_size = 22
+bbcode_enabled = true
+fit_content = true
+scroll_active = false
+
+[node name="InputContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=1022274451]
+layout_mode = 2
+
+[node name="Prompt" type="Label" parent="VBoxContainer/InputContainer" unique_id=1294628949]
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+text = "> "
+
+[node name="InputField" type="LineEdit" parent="VBoxContainer/InputContainer" unique_id=86616527]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 22
